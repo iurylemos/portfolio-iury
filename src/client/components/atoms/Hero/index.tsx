@@ -7,8 +7,9 @@ export default function Hero(): JSX.Element {
         autoPlay
         muted
         loop
-        className="rotate-180 absolute top-[-340px] left-0 z-[1] w-full h-full object-cover"
+        className="rotate-180 absolute top-[-340px] w-full h-full left-0 z-[1] object-cover"
       >
+        <source src="/videos/blackhole.mp4" type="video/mp4" />
         <source src="/videos/blackhole.webm" type="video/webm" />
       </video>
     </div>
