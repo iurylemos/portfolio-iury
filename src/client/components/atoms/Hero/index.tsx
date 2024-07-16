@@ -62,7 +62,7 @@ export default function Hero(): JSX.Element {
         className="w-full h-full flex items-center justify-center"
       >
         <Image
-          src="/icons/mainiconsdark.svg"
+          src="/icons/mainIconsdark.svg"
           alt="work icons"
           height={650}
           width={650}
