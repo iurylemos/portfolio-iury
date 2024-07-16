@@ -29,7 +29,7 @@ export default function Hero(): JSX.Element {
         </motion.div>
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-6 text-5xl md:text-6xl font-bold text-white md:max-w-[600px] w-full h-auto"
         >
           <span>
             Providing
@@ -62,7 +62,7 @@ export default function Hero(): JSX.Element {
         className="w-full h-full flex items-center justify-center"
       >
         <Image
-          src="/icons/mainIconsdark.svg"
+          src="/icons/mainiconsdark.svg"
           alt="work icons"
           height={650}
           width={650}
