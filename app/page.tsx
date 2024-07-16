@@ -1,10 +1,10 @@
-import Hero from "@/src/client/components/atoms/Hero";
+import HeroContainer from "@/src/client/components/molecules/HeroContainer";
 
 export default function Home(): JSX.Element {
   return (
     <main className="h-full w-full">
       <div className="flex flex-col h-[850px] gap-20">
-        <Hero />
+        <HeroContainer />
       </div>
     </main>
   );

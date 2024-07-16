@@ -1,20 +1,19 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { slideInFromTop } from "@/src/client/utils/motion.util";
+import Hero from "@/src/client/components/atoms/Hero";
 
 export default function HeroContainer(): JSX.Element {
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
-    >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
-        <motion.div
-          variants={slideInFromTop}
-          className="welcome-box py-[15px] px-[4px] border border-[#7042f88b] opacity-[0.9]"
-        ></motion.div>
-      </div>
-    </motion.div>
+    <div className="relative flex flex-col h-full w-full">
+      <video
+        autoPlay
+        muted
+        loop
+        className="rotate-180 absolute top-[-340px] w-full h-full left-0 z-[1] object-cover"
+      >
+        <source src="/videos/blackhole.mp4" type="video/mp4" />
+        <source src="/videos/blackhole.webm" type="video/webm" />
+      </video>
+      <Hero />
+    </div>
   );
 }
