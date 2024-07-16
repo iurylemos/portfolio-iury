@@ -5,6 +5,7 @@ import {
   frontendSkills,
   fullStackSkills,
   otherSkill,
+  skillData,
 } from "@/src/client/constants/navbar.constant";
 import SkillProvider from "@/src/client/providers/skill.provider";
 import React from "react";
@@ -18,6 +19,18 @@ export default function Skills(): JSX.Element {
       style={{ transform: "scale(0.9)" }}
     >
       <SkillText />
+      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+        {skillData.map((skill, idx) => (
+          <React.Fragment key={skill.skill_name}>
+            <SkillProvider
+              src={skill.Image}
+              heigth={skill.height}
+              width={skill.width}
+              index={idx}
+            />
+          </React.Fragment>
+        ))}
+      </div>
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {frontendSkills.map((skill, idx) => (
           <React.Fragment key={skill.skill_name}>
@@ -76,8 +89,10 @@ export default function Skills(): JSX.Element {
             loop
             muted
             autoPlay
-            src="/videos/card-video.webm"
-          ></video>
+          >
+            <source src="/videos/cards-video.mp4" type="video/mp4" />
+            <source src="/videos/cards-video.webm" type="video/webm" />
+          </video>
         </div>
       </div>
     </section>
