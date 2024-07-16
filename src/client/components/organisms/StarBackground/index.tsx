@@ -10,11 +10,7 @@ import {
   Color,
 } from "three";
 
-interface StarBackgroundProps {}
-
-export default function StarBackground(
-  props: StarBackgroundProps
-): JSX.Element {
+export default function StarBackground(): JSX.Element {
   const ref = useRef<PointsRef>(null);
   const [sphere] = useState(
     () =>
@@ -43,7 +39,7 @@ export default function StarBackground(
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled>
         <PointMaterial {...pointsMaterialProps} />
       </Points>
     </group>

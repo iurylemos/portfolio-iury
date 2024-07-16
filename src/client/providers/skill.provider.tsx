@@ -17,7 +17,7 @@ export default function SkillProvider({
   width,
   heigth,
   index,
-}: SkillProviderProps): JSX.Element {
+}: Readonly<SkillProviderProps>): JSX.Element {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });

@@ -9,7 +9,7 @@ interface StarCanvasProps {
 
 export default function StarCanvas({
   childrenElement: ChildrenElement,
-}: StarCanvasProps): JSX.Element {
+}: Readonly<StarCanvasProps>): JSX.Element {
   return (
     <div className="w-full h-auto fixed inset-0 z-[20]">
       <Canvas camera={{ position: [0, 0, 1] }}>
