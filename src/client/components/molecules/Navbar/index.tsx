@@ -20,12 +20,12 @@ export default function Navbar(): JSX.Element {
             className="cursor-pointer hover:animate-spin"
           />
           <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-            Iury Developer
+            Maia Solutions
           </span>
         </a>
 
         <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[100px] rounded-full text-gray-200">
+          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[6px] rounded-full text-gray-200">
             <a href="#about-me" className="cursor-pointer">
               About me
             </a>

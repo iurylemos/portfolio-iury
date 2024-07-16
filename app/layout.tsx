@@ -4,6 +4,7 @@ import "./globals.css";
 import StarCanvas from "@/src/client/components/atoms/StarCanvas";
 import StarBackground from "@/src/client/components/organisms/StarBackground";
 import Navbar from "@/src/client/components/molecules/Navbar";
+import Footer from "@/src/client/components/organisms/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <StarCanvas childrenElement={StarBackground} />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
