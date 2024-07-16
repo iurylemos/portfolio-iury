@@ -2,8 +2,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { slideInFromTop } from "@/src/client/utils/motion.util";
+import {
+  slideInFromLeft,
+  slideInFromRight,
+  slideInFromTop,
+} from "@/src/client/utils/motion.util";
 import { SparklesIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 export default function Hero(): JSX.Element {
   return (
@@ -22,7 +27,44 @@ export default function Hero(): JSX.Element {
             Full Stack Developer Portfolio
           </h1>
         </motion.div>
+        <motion.div
+          variants={slideInFromLeft(0.5)}
+          className="flex flex-col gap-6 text-6xl text-bold text-white max-w-[600px] w-auto h-auto"
+        >
+          Providing
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+            the best
+          </span>
+          project experience
+        </motion.div>
+
+        <motion.p
+          variants={slideInFromLeft(0.8)}
+          className="text-lg text-gray-400 my-5 max-w-[600px]"
+        >
+          I&apos;m a Full Stack Software Enginner with experience in website,
+          mobile, and software development. Check out my projects and skills.
+        </motion.p>
+
+        <motion.a
+          variants={slideInFromLeft(1)}
+          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+        >
+          Learn More!
+        </motion.a>
       </div>
+
+      <motion.div
+        variants={slideInFromRight(0.8)}
+        className="w-full h-full flex items-center justify-center"
+      >
+        <Image
+          src="/icons/mainIconsdark.svg"
+          alt="work icons"
+          height={650}
+          width={650}
+        />
+      </motion.div>
     </motion.div>
   );
 }
