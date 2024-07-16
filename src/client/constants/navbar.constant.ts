@@ -160,7 +160,7 @@ export const frontendSkills: Skill[] = [
   },
 ];
 
-export const BackendSkills: Skill[] = [
+export const backendSkills: Skill[] = [
   {
     skill_name: "Node js",
     Image: "/images/node-js.png",
