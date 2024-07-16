@@ -18,7 +18,7 @@ export default function StarBackground(
   const ref = useRef<PointsRef>(null);
   const [sphere] = useState(
     () =>
-      random.inSphere(new Float32Array(5000), { radius: 1.2 }) as Float32Array
+      random.inSphere(new Float32Array(5001), { radius: 1.2 }) as Float32Array
   );
 
   const pointsMaterialProps: Partial<PointsMaterialProps> = useMemo(
@@ -38,6 +38,8 @@ export default function StarBackground(
       ref.current.rotation.y -= delta / 15;
     }
   });
+
+  console.log("sphere", sphere);
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
